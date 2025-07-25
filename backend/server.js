@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(
   cors({
-    origin: ["https://jobsnest.netlify.app/"],
+    origin: ["https://jobsnest.netlify.app"],
     credentials: true,
   })
 );
