@@ -1,0 +1,210 @@
+.job-filter {
+  display: flex;
+  align-items: center;
+  padding: 20px 0px;
+}
+.job-filter__search {
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  height: 50px;
+  border-right: 3px solid #eaeaea;
+}
+.job-filter__search .job-filter__icon {
+  height: 18px;
+  width: 18px;
+  object-fit: contain;
+}
+
+.job-filter__search .job-filter__input {
+  font-family: "Satoshi", sans-serif;
+  color: #686868;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 450;
+  padding: 5px 10px;
+  width: 200px;
+  margin-left: 10px;
+}
+.job-filter__location {
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  height: 50px;
+  border-right: 3px solid #eaeaea;
+}
+.job-filter__location .job-filter__icon {
+  height: 18px;
+  width: 18px;
+  object-fit: contain;
+}
+.job-filter__location .job-filter__label {
+  font-weight: 450;
+  color: #686868;
+  width: 180px;
+  margin: 0px 20px;
+}
+.job-filter__location .dropdown-arrow__icon {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.job-filter__location .dropdown-arrow {
+  position: relative;
+  padding: 5px;
+}
+.job-filter__location .dropdown-arrow:hover .dropdown-arrow__icon {
+  rotate: 180deg;
+}
+.job-filter__location .dropdown-arrow:hover .dropdown-menu {
+  display: initial;
+}
+
+.job-filter__location .dropdown-menu {
+  position: absolute;
+  display: none;
+  list-style: none;
+  width: 200px;
+  top: 75%;
+  left: 0;
+  z-index: 1000;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 20px;
+  box-shadow: 0px 0px 14px 0px #d3d3d326;
+}
+
+.job-filter__type {
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  height: 50px;
+  border-right: 3px solid #eaeaea;
+}
+
+.job-filter__type .job-filter__icon {
+  height: 18px;
+  width: 18px;
+  object-fit: contain;
+}
+.job-filter__type .job-filter__label {
+  font-weight: 450;
+  color: #686868;
+  width: 180px;
+  margin: 0px 20px;
+}
+.job-filter__type .dropdown-arrow__icon {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.job-filter__type .dropdown-arrow {
+  position: relative;
+  padding: 5px;
+}
+.job-filter__type .dropdown-arrow:hover .dropdown-arrow__icon {
+  rotate: 180deg;
+}
+.job-filter__type .dropdown-arrow:hover .dropdown-menu {
+  display: initial;
+}
+.job-filter__type .dropdown-menu {
+  position: absolute;
+  display: none;
+  list-style: none;
+  width: 200px;
+  top: 75%;
+  left: 0;
+  z-index: 1000;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 20px;
+  box-shadow: 0px 0px 14px 0px #d3d3d326;
+}
+
+.dropdown-menu li {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  font-weight: 450;
+  color: #686868;
+}
+
+.dropdown-menu li:hover {
+  background: #fcfafa;
+}
+
+.job-filter__salary {
+  width: 260px;
+  padding: 5px 20px;
+}
+.job-filter__salary .job-filter-labels {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.job-filter__salary .job-filter-labels .job-filter__label {
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  color: #222222;
+}
+
+.job-filter__range {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: transparent;
+  position: relative;
+  margin-top: 16px;
+  outline: none;
+  height: 4px;
+  border-radius: 3px;
+}
+
+.job-filter__range::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  top: 51%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 6px solid black;
+  z-index: 7;
+}
+
+.job-filter__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 6px solid black;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+}
+
+@media only screen and (max-width: 1200px) {
+  .job-filter {
+    flex-wrap: wrap;
+  }
+  .job-filter__search,
+  .job-filter__location,
+  .job-filter__type {
+    border: none;
+  }
+}

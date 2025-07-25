@@ -1,0 +1,175 @@
+.job-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  background-color: #fbfbff;
+  justify-content: space-evenly;
+  gap: 15px;
+  min-height: 500px;
+}
+.job-card {
+  width: 320px;
+  height: 360px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 14px 0px #d3d3d326;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  position: relative;
+  background-color: #ffffff;
+}
+.job-card.has-label::after {
+  content: attr(data-posted);
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #b0d9ff;
+  color: #000000;
+  padding: 5px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: "Satoshi", sans-serif;
+}
+.job-card__logo {
+  height: 60px;
+  width: 60px;
+  object-fit: contain;
+  padding: 4px;
+  background: linear-gradient(180deg, #fefefd 0%, #f1f1f1 100%);
+
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 0px 10.25px 0px #94949440;
+}
+.job-card__title {
+  width: 100%;
+  height: 30px;
+  font-size: 20px;
+  color: #000000;
+}
+.job-card__details {
+  display: flex;
+  align-items: center;
+}
+.job-card__detail {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+.job-card__detail img {
+  height: 18px;
+  width: 18px;
+  object-fit: contain;
+}
+.job-card__detail p {
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 6px;
+}
+.job-card__description {
+  list-style: none;
+}
+.job-card__description li {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  color: #555555;
+}
+.job-card__description li::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: #555555;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.job-card__apply-button {
+  outline: none;
+  background: #00aaff;
+  border: 1px solid #00aaff;
+  box-shadow: 0px 0px 14px 0px #5d5d5d26;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: "Satoshi", sans-serif;
+  width: 100%;
+  height: 40px;
+  font-weight: 500;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.no-jobs {
+  padding: 30px;
+  background-color: #fbfbff;
+}
+
+
+* Shimmer effect */
+.shimmer {
+  background-color: #f6f7f8;
+  border: 1px solid #e1e1e1;
+  padding: 20px;
+  border-radius: 10px;
+  animation: pulse 1.5s infinite ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.shimmer-bg {
+  background: linear-gradient(90deg, #e0e0e0 25%, #f2f2f2 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite linear;
+  border-radius: 5px;
+}
+
+.shimmer-logo {
+  width: 60px;
+  height: 60px;
+}
+
+.shimmer-title {
+  width: 40%;
+  height: 20px;
+}
+
+.shimmer-detail {
+  width: 70%;
+  height: 15px;
+}
+
+.shimmer-button {
+  width: 30%;
+  height: 30px;
+  border-radius: 20px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.nojobfound{
+  font-size: 26px;
+    font-weight: 400;
+    padding-top: 50px;
+    font-style: italic;
+}
