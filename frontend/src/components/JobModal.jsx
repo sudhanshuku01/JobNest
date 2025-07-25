@@ -2,8 +2,40 @@ import React, { useEffect, useRef, useState } from "react";
 import doubleRightIcon from "../assets/doubleright.png";
 import doubleDownIcon from "../assets/doubledown.png";
 
+const topITCities = [
+  "Bangalore",
+  "Hyderabad",
+  "Pune",
+  "Chennai",
+  "Mumbai",
+  "Delhi",
+  "Noida",
+  "Gurgaon",
+  "Kolkata",
+  "Ahmedabad",
+  "Jaipur",
+  "Indore",
+  "Chandigarh",
+  "Coimbatore",
+  "Nagpur",
+  "Thiruvananthapuram",
+  "Kochi",
+  "Bhubaneswar",
+  "Visakhapatnam",
+  "Vadodara",
+  "Mysore",
+  "Surat",
+  "Lucknow",
+  "Bhopal",
+  "Raipur",
+  "Patna",
+  "Ranchi",
+  "Dehradun",
+  "Vijayawada",
+  "Guwahati",
+];
+
 const JobModal = ({ onClose }) => {
-  
   const [jobTitle, setJobTitle] = useState("");
   const [companyName, setCompanyName] = useState("");
   const [location, setLocation] = useState("");
@@ -120,10 +152,11 @@ const JobModal = ({ onClose }) => {
               <option value="" disabled>
                 Choose your preferred location
               </option>
-              <option value="Patna">Patna</option>
-              <option value="Bangalore">Bangalore</option>
-              <option value="Delhi">Delhi</option>
-              <option value="Mumbai">Mumbai</option>
+              {topITCities.map((city) => (
+                <option key={city} value={city}>
+                  {city}
+                </option>
+              ))}
             </select>
           </div>
 
