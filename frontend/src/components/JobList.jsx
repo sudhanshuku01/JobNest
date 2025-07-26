@@ -2,7 +2,10 @@ import onSiteIcon from "../assets/onsiteicon.png";
 import packageIcon from "../assets/packageicon.png";
 import expIcon from "../assets/expicon.png";
 import amazonIcon from "../assets/amazonicon.png";
+import teslaIcon from "../assets/teslaicon.png";
+import swiggyIcon from "../assets/swiggyicon.png";
 
+const Images = [amazonIcon, teslaIcon, swiggyIcon];
 const JobList = ({ jobs, loading }) => {
   if (loading) {
     return (
@@ -48,7 +51,7 @@ const JobList = ({ jobs, loading }) => {
             data-posted={postedLabel}
           >
             <img
-              src={amazonIcon}
+              src={Images[Math.floor(Math.random() * Images.length)]}
               alt="Company Logo"
               className="job-card__logo"
             />
